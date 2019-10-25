@@ -91,7 +91,7 @@ public class Lab3_SimulacionGuerra {
                                     a = new Rifle(max, min, autom, nombreA, price);
                                     break;
                                 case 2:
-                                    System.out.print("Material del Arma Blanca");
+                                    System.out.print("Material del Arma Blanca: ");
                                     String material = input.next();
                                     a = new ArmaBlanca(material, nombreA, price);
                                     break;
@@ -137,7 +137,7 @@ public class Lab3_SimulacionGuerra {
                                     a = new Rifle(max, min, autom, nombreA, price);
                                     break;
                                 case 2:
-                                    System.out.print("Material del Arma Blanca");
+                                    System.out.print("Material del Arma Blanca: ");
                                     String material = input.next();
                                     a = new ArmaBlanca(material, nombreA, price);
                                     break;
@@ -183,7 +183,7 @@ public class Lab3_SimulacionGuerra {
                                     a = new Rifle(max, min, autom, nombreA, price);
                                     break;
                                 case 2:
-                                    System.out.print("Material del Arma Blanca");
+                                    System.out.print("Material del Arma Blanca: ");
                                     String material = input.next();
                                     a = new ArmaBlanca(material, nombreA, price);
                                     break;
@@ -268,7 +268,7 @@ public class Lab3_SimulacionGuerra {
                             }
                             armas.add(new Rifle(max, min, autom, nombreA, price));
                         case 3:
-                            System.out.print("Material del Arma Blanca");
+                            System.out.print("Material del Arma Blanca: ");
                             material = input.next();
                             armas.add(new ArmaBlanca(material, nombreA, price));
                     }
@@ -366,93 +366,6 @@ public class Lab3_SimulacionGuerra {
                     }
                     System.out.println(salida);
                     break;
-
-                case 11: {
-                    Soldado tablero[][] = new Soldado[10][10];
-                    for (int i = 0; i < tablero.length; i++) {
-                        for (int j = 0; j < tablero.length; j++) {
-                            System.out.print("[ ]");
-                        }
-                        System.out.println();
-                    }
-
-                    System.out.print("Ingrese la posicion del primer ejercito que desea elegir: ");
-                    int pos1 = input.nextInt();
-                    int cont1 = 0;
-                    Random rand = new Random();
-                    int aleatorioI;
-                    int aleatorioJ;
-                    for (int i = 0; i < tablero.length; i++) {
-                        for (int j = 0; j < tablero.length; j++) {
-                            aleatorioI = 0 + rand.nextInt(11);
-                            aleatorioJ = 0 + rand.nextInt(11);
-                            if (tablero[aleatorioI][aleatorioJ] instanceof Soldado) {
-
-                            } else if (cont1 < 5) {
-
-                                tablero[aleatorioI][aleatorioJ] = ejercitos.get(pos1).getSoldados().get(cont1);
-                                cont1++;
-                            }
-                        }
-                    }
-                    System.out.print("Ingrese la posicion del segundo ejercito que desea elegir: ");
-                    int pos2 = input.nextInt();
-                    int cont2 = 0;
-                    aleatorioI = 0;
-                    aleatorioJ = 0;
-                    for (int i = 0; i < tablero.length; i++) {
-                        for (int j = 0; j < tablero.length; j++) {
-                            aleatorioI = 0 + rand.nextInt(11);
-                            aleatorioJ = 0 + rand.nextInt(11);
-                            if (tablero[aleatorioI][aleatorioJ] instanceof Soldado) {
-
-                            } else if (cont1 < 5) {
-                                tablero[aleatorioI][aleatorioJ] = ejercitos.get(pos2).getSoldados().get(cont2);
-                                cont2++;
-                            }
-                        }
-                    }
-                    //llenado del tablero.
-                    boolean gane = false;
-                    int turno = 1;
-                    while (!gane) {
-                        if (turno == 1) {
-                            System.out.println("Jugador 1");
-                            System.out.print("Ingrese el numero i de la posicion del soldado: ");
-                            int i1 = input.nextInt();
-                            System.out.print("Ingrese el numero j de la posicion del soldado: ");
-                            int j1 = input.nextInt();
-                            System.out.print("Ingrese el numero i de la posicion a donde lo va mover: ");
-                            int i2 = input.nextInt();
-                            System.out.print("Ingrese el numero j de la posicion a donde lo va mover: ");
-                            int j2 = input.nextInt();
-                            for (int i = 0; i < tablero.length; i++) {
-                                for (int j = 0; j < tablero.length; j++) {
-                                    if (tablero[i2][j2] instanceof Soldado) {
-                                        System.out.println("En esa posicion ya hay un soldado");
-                                    } else {
-
-                                    }
-                                }
-                            }
-                            int j2 = input.nextInt();
-                            turno = 2;
-                        } else if (turno == 2) {
-                            System.out.println("Jugador 1");
-                            System.out.print("Ingrese el numero i de la posicion del soldado: ");
-                            int i1 = input.nextInt();
-                            System.out.print("Ingrese el numero j de la posicion del soldado: ");
-                            int j1 = input.nextInt();
-                            System.out.print("Ingrese el numero i de la posicion a donde lo va mover: ");
-                            int i2 = input.nextInt();
-                            System.out.print("Ingrese el numero j de la posicion a donde lo va mover: ");
-                            int j2 = input.nextInt();
-                            turno = 1;
-                        }
-                    }
-
-                }
-                break;
             }
         }
 
