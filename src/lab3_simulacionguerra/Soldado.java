@@ -58,6 +58,14 @@ public class Soldado {
         this.sexo = sexo;
     }
 
+    public Arma getArm() {
+        return arm;
+    }
+
+    public void setArm(Arma arm) {
+        this.arm = arm;
+    }
+
     @Override
     public String toString() {
         return "Soldado{" + "nombre=" + nombre + ", lugar=" + lugar + ", edad=" + edad + ", sexo=" + sexo + '}';
