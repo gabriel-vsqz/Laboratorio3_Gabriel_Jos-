@@ -8,13 +8,12 @@ public class Lab3_SimulacionGuerra {
 
     public static void main(String[] args) {
 
-
         ArrayList<Ejercito> ejercitos = new ArrayList();
         ArrayList<Arma> armas = new ArrayList();
         ArrayList<Soldado> soldados1 = new ArrayList();
 
         Scanner input = new Scanner(System.in);
-        
+
         int option = 0;
 
         while (option != 12) {
@@ -58,7 +57,7 @@ public class Lab3_SimulacionGuerra {
                     } else if (tipo_sol == 3) {
                         soldados1.add(new Ejecutor(nombre_sol, lugar, edad, sexo));
                     }
-                break;
+                    break;
 
                 case 3:
                     System.out.print("Ingrese el nombre del Arma: ");
@@ -72,7 +71,7 @@ public class Lab3_SimulacionGuerra {
                     while (type < 1 && type > 3) {
                         System.out.println("El tipo que desea no existe, utilice los propuestos.");
                         System.out.printf("%s\n%s", "Tipo 1 - Bomba\nTipo 2 - Rifle\nTipo 3 - Arma Blanca",
-                            "Tipo deseado: ");
+                                "Tipo deseado: ");
                         type = input.nextInt();
                     }
                     switch (type) {
@@ -91,15 +90,14 @@ public class Lab3_SimulacionGuerra {
                             System.out.print("¿Es automático? [1 - Si/2 - No]: ");
                             int auto = input.next().charAt(0);
                             String autom = "";
-                            while(auto != 1 || auto != 2){
+                            while (auto != 1 || auto != 2) {
                                 System.out.print("Debe utilizar las opciones propuestas [1/2]");
                                 System.out.print("¿Es automático? [1 - Si/2 - No]: ");
                                 auto = input.next().charAt(0);
                             }
                             if (auto == 1) {
                                 autom = "Automática";
-                            }
-                            else {
+                            } else {
                                 autom = "No automática";
                             }
                             armas.add(new Rifle(max, min, autom, nombreA, price));
@@ -124,10 +122,23 @@ public class Lab3_SimulacionGuerra {
                     break;
 
                 case 6:
-                    
+                    System.out.print("Ingrese la posición del Ejército a Eliminar: ");
+                    int pos = input.nextInt();
+                    if (pos > ejercitos.size() - 1) {
+                        System.out.println("Posición Incorrecta");
+                    } else {
+                        ejercitos.remove(pos);
+                    }
                     break;
 
                 case 7:
+                    System.out.print("Ingrese la posición del Soldado a Eliminar: ");
+                    pos = input.nextInt();
+                    if (pos > soldados1.size() - 1) {
+                        System.out.println("Posición Incorrecta");
+                    } else {
+                        soldados1.remove(pos);
+                    }
                     break;
 
                 case 8:
@@ -139,7 +150,13 @@ public class Lab3_SimulacionGuerra {
                     break;
 
                 case 9:
-                    
+                    System.out.print("Ingrese la posición del Arma a Eliminar: ");
+                    pos = input.nextInt();
+                    if (pos > armas.size() - 1) {
+                        System.out.println("Posición Incorrecta");
+                    } else {
+                        armas.remove(pos);
+                    }
                     break;
 
                 case 10:
