@@ -22,7 +22,7 @@ public class ArmaBlanca extends Arma {
 
     @Override
     public String toString() {
-        return "ArmaBlanca{" + "material=" + material + '}';
+        return super.toString() + "ArmaBlanca{" + "material=" + material + '}';
     }
     
 }
