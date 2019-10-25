@@ -19,6 +19,8 @@ public class Lab3_SimulacionGuerra {
                     + "7 - Modificar Ejército\n8 - Listar Ejército\n9 - Eliminar Ejército\n10 - Eliminar Soldad\n11 - Listar Soldados\n"
                     + "12 - Eliminar Arma\n13 - Listar Armas");
             option = input.nextInt();
+            
+            
         }
     }
     
