@@ -5,12 +5,12 @@ public class Soldado {
     private String nombre;
     private String lugar;
     private int edad;
-    private String sexo;
+    private char sexo;
 
     public Soldado() {
     }
 
-    public Soldado(String nombre, String lugar, int edad, String sexo) {
+    public Soldado(String nombre, String lugar, int edad, char sexo) {
         this.nombre = nombre;
         this.lugar = lugar;
         this.edad = edad;
@@ -41,11 +41,11 @@ public class Soldado {
         this.edad = edad;
     }
 
-    public String getSexo() {
+    public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(char sexo) {
         this.sexo = sexo;
     }
 

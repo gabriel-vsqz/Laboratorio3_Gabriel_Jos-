@@ -8,7 +8,7 @@ public class Caballero extends Soldado {
         super();
     }
 
-    public Caballero(Arma arma, String nombre, String lugar, int edad, String sexo) {
+    public Caballero(Arma arma, String nombre, String lugar, int edad, char sexo) {
         super(nombre, lugar, edad, sexo);
         this.arma = arma;
     }
