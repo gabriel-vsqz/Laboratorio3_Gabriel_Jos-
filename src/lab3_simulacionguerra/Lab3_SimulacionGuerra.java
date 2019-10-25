@@ -8,10 +8,8 @@ public class Lab3_SimulacionGuerra {
 
     public static void main(String[] args) {
 
-        
         ArrayList<Ejercito> ejercitos = new ArrayList();
         ArrayList<Arma> armas = new ArrayList();
-        
 
         Scanner input = new Scanner(System.in);
         ArrayList<Soldado> soldados1 = new ArrayList();
@@ -40,17 +38,29 @@ public class Lab3_SimulacionGuerra {
                     break;
 
                 case 2: {
-
+                    System.out.print("1.Genaral\n"
+                            + "2.Caballero\n"
+                            + "3.Ejecutor\n"
+                            + "Ingrese el numero de soldado que desea: ");
+                    int tipo_sol = input.nextInt();
                     System.out.print("Ingrese el nombre del soldado: ");
-                    nombre = input.nextLine();
+                    String nombre_sol = input.nextLine();
                     System.out.print("Ingrese el lugar: ");
                     String lugar = input.nextLine();
                     System.out.print("Ingrese la edad: ");
                     int edad = input.nextInt();
                     System.out.println("Ingrese el sexo del soldado: ");
                     char sexo = input.next().charAt(0);
-                    
-                    soldados1.add(new Soldado(nombre, lugar, edad, sexo));
+
+                    if (tipo_sol == 1) {
+                        System.out.print("Ingrese los años de mandato del General: ");
+                        int años = input.nextInt();
+                        soldados1.add(new General(años, nombre_sol, lugar, edad, sexo));
+                    } else if (tipo_sol == 2) {
+                        soldados1.add(new Caballero(nombre_sol, lugar, edad, sexo));
+                    } else if (tipo_sol == 3) {
+                        soldados1.add(new Ejecutor(nombre_sol, lugar, edad, sexo));
+                    }
 
                 }
                 break;
@@ -58,7 +68,15 @@ public class Lab3_SimulacionGuerra {
                 case 3: {
                     System.out.print("Ingrese la posicion del ejercito al cual quiera añadirle un soldado: ");
                     int pos = input.nextInt();
-                    
+                    if (pos > ejercitos.size() - 1) {
+                        System.out.println("La posicion ingresada es inexistente");
+                    } else {
+                        System.out.print("Ingrese la posicion del soldado al que quiera agarrar: ");
+                        int pos_sol = input.nextInt();
+                        Soldado x = soldados1.get(pos_sol);
+                        ((Ejercito) ejercitos.get(pos)).getSoldados().add(x);
+                    }
+
                 }
                 break;
 
@@ -68,7 +86,7 @@ public class Lab3_SimulacionGuerra {
                     System.out.print("Ingrese el precio del Arma: ");
                     double price = input.nextDouble();
                     System.out.print("Tipo de Arma");
-                    
+
                     break;
 
                 case 5:

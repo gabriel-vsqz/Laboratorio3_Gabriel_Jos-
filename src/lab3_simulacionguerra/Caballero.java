@@ -8,9 +8,9 @@ public class Caballero extends Soldado {
         super();
     }
 
-    public Caballero(Arma arma, String nombre, String lugar, int edad, char sexo) {
+    public Caballero(String nombre, String lugar, int edad, char sexo) {
         super(nombre, lugar, edad, sexo);
-        this.arma = arma;
+
     }
 
     public Arma getArma() {
@@ -25,5 +25,5 @@ public class Caballero extends Soldado {
     public String toString() {
         return "Caballero{" + "arma=" + arma + '}';
     }
-    
+
 }
