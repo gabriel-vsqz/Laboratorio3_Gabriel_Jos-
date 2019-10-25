@@ -6,6 +6,7 @@ public class Soldado {
     private String lugar;
     private int edad;
     private char sexo;
+    private Arma arm;
 
     public Soldado() {
     }
@@ -17,6 +18,14 @@ public class Soldado {
         this.sexo = sexo;
     }
 
+    public Soldado(String nombre, String lugar, int edad, char sexo, Arma arm) {
+        this.nombre = nombre;
+        this.lugar = lugar;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.arm = arm;
+    }
+    
     public String getNombre() {
         return nombre;
     }

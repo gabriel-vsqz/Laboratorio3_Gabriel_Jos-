@@ -2,28 +2,19 @@ package lab3_simulacionguerra;
 
 public class Caballero extends Soldado {
 
-    private Arma arma;
-
     public Caballero() {
-        super();
     }
 
     public Caballero(String nombre, String lugar, int edad, char sexo) {
         super(nombre, lugar, edad, sexo);
-
     }
 
-    public Arma getArma() {
-        return arma;
-    }
-
-    public void setArma(Arma arma) {
-        this.arma = arma;
+    public Caballero(String nombre, String lugar, int edad, char sexo, Arma arm) {
+        super(nombre, lugar, edad, sexo, arm);
     }
 
     @Override
     public String toString() {
-        return "Caballero{" + "arma=" + arma + '}';
+        return super.toString() + "Caballero";
     }
-
 }
