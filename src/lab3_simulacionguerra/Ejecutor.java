@@ -32,7 +32,7 @@ public class Ejecutor extends Soldado {
 
     @Override
     public String toString() {
-        return super.toString() + "Ejecutor{" + "bombas=" + bombas + '}';
+        return super.toString() +  "Ejecutor{" + "bomba=" + bomba + '}';
     }
     
 }
