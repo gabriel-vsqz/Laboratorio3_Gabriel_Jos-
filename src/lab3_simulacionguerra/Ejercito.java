@@ -13,12 +13,12 @@ public class Ejercito {
     public Ejercito() {
     }
 
-    public Ejercito(String nombre, String region, int cant_victorias, double dinero_dis, ArrayList<Soldado> soldados) {
+    public Ejercito(String nombre, String region, double dinero_dis) {
         this.nombre = nombre;
         this.region = region;
-        this.cant_victorias = cant_victorias;
+        //this.cant_victorias = cant_victorias;
         this.dinero_dis = dinero_dis;
-        this.soldados = soldados;
+        //this.soldados = soldados;
     }
 
     public String getNombre() {

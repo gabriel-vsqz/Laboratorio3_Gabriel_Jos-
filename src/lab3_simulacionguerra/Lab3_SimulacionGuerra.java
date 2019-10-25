@@ -1,5 +1,6 @@
 package lab3_simulacionguerra;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 //import javax.swing.JOptionPane;
 
@@ -7,6 +8,9 @@ import java.util.Scanner;
 public class Lab3_SimulacionGuerra {
 
     public static void main(String[] args) {
+        
+        ArrayList<Ejercito> ejercitos = new ArrayList();
+        ArrayList<Arma> armas = new ArrayList();
         
         Scanner input = new Scanner(System.in);
         
@@ -23,6 +27,14 @@ public class Lab3_SimulacionGuerra {
             switch(option){
                 
                 case 1:
+                    System.out.print("Nombre del Ejército: ");
+                    String nombre = input.next();
+                    System.out.print("Región a la que pertenece el Ejército: ");
+                    String region = input.next();
+                    System.out.print("Dinero disponible: ");
+                    double money = input.nextDouble();
+                    Ejercito e = new Ejercito(nombre, region, money);
+                    ejercitos.add(e);
                     break;
                     
                 case 2:
@@ -32,6 +44,12 @@ public class Lab3_SimulacionGuerra {
                     break;
                     
                 case 4:
+                    System.out.print("Ingrese el nombre del Arma: ");
+                    String nombreA = input.next();
+                    System.out.print("Ingrese el precio del Arma: ");
+                    double price = input.nextDouble();
+                    System.out.print("Tipo de Arma");
+                    
                     break;
                     
                 case 5:
