@@ -81,7 +81,7 @@ public class Lab3_SimulacionGuerra {
                                     while (auto < 1 && auto > 2) {
                                         System.out.print("Debe utilizar las opciones propuestas [1/2]");
                                         System.out.print("¿Es automático? [1 - Si/2 - No]: ");
-                                        auto = input.next().charAt(0);
+                                        auto = input.nextInt();
                                     }
                                     if (auto == 1) {
                                         autom = "Automática";
@@ -122,7 +122,7 @@ public class Lab3_SimulacionGuerra {
                                     System.out.print("Alcance Mínimo: ");
                                     int min = input.nextInt();
                                     System.out.print("¿Es automático? [1 - Si/2 - No]: ");
-                                    int auto = input.next().charAt(0);
+                                    int auto = input.nextInt();
                                     String autom = "";
                                     while (auto < 1 && auto > 2) {
                                         System.out.print("Debe utilizar las opciones propuestas [1/2]");
@@ -168,7 +168,7 @@ public class Lab3_SimulacionGuerra {
                                     System.out.print("Alcance Mínimo: ");
                                     int min = input.nextInt();
                                     System.out.print("¿Es automático? [1 - Si/2 - No]: ");
-                                    int auto = input.next().charAt(0);
+                                    int auto = input.nextInt();
                                     String autom = "";
                                     while (auto < 1 && auto > 2) {
                                         System.out.print("Debe utilizar las opciones propuestas [1/2]");
@@ -254,7 +254,7 @@ public class Lab3_SimulacionGuerra {
                             System.out.print("Alcance Mínimo: ");
                             int min = input.nextInt();
                             System.out.print("¿Es automático? [1 - Si/2 - No]: ");
-                            int auto = input.next().charAt(0);
+                            int auto = input.nextInt();
                             String autom = "";
                             while (auto < 1 && auto > 2) {
                                 System.out.print("Debe utilizar las opciones propuestas [1/2]");
