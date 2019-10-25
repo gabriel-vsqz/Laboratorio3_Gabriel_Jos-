@@ -22,6 +22,7 @@ public class Lab3_SimulacionGuerra {
                     + "4 - Modificar Ejército\n5 - Listar Ejército\n"
                     + "6 - Eliminar Ejército\n7- Eliminar Soldado\n8 - Listar Soldados\n"
                     + "9 - Eliminar Arma\n10 - Listar Armas\nIngrese opción que desea: ");
+
             option = input.nextInt();
 
             switch (option) {
@@ -48,6 +49,7 @@ public class Lab3_SimulacionGuerra {
                     int edad = input.nextInt();
                     System.out.println("Ingrese el sexo del soldado: ");
                     char sexo = input.next().charAt(0);
+
                     if (tipo_sol == 1) {
                         System.out.print("Ingrese los años de mandato del General: ");
                         int años = input.nextInt();
@@ -64,6 +66,7 @@ public class Lab3_SimulacionGuerra {
                     String nombreA = input.next();
                     System.out.print("Ingrese el precio del Arma: ");
                     double price = input.nextDouble();
+
                     System.out.println("Tipo de Arma");
                     System.out.printf("%s\n%s", "Tipo 1 - Bomba\nTipo 2 - Rifle\nTipo 3 - Arma Blanca",
                             "Tipo deseado: ");
@@ -101,17 +104,46 @@ public class Lab3_SimulacionGuerra {
                                 autom = "No automática";
                             }
                             armas.add(new Rifle(max, min, autom, nombreA, price));
-                            break;
+
                         case 3:
                             System.out.print("Material del Arma Blanca");
                             material = input.next();
                             armas.add(new ArmaBlanca(material, nombreA, price));
-                            break;
                     }
                     break;
+                
 
                 case 4:
-                    break;
+                    System.out.print("Ingrese la posicion del ejercito a modificar: ");
+                    int pos = input.nextInt();
+                    System.out.println("1.Modificar el nombre del ejercito\n"
+                            + "2.Modificar La Region\n"
+                            + "3.Modificar el Presupuesto\n"
+                            + "Ingrese el numero de la opcion a modificar: ");
+                    int op = input.nextInt();
+
+                    switch (op) {
+                        case 1: {
+                            System.out.print("Ingrese el nuevo nombre del ejercito: ");
+                            String newName = input.nextLine();
+                            ejercitos.get(pos).setNombre(newName);
+                        }
+
+                        break;
+                        case 2: {
+                            System.out.print("Ingrese la nueva region: ");
+                            String newRegion = input.nextLine();
+                            ejercitos.get(pos).setRegion(newRegion);
+                        }
+                        break;
+
+                        case 3: {
+                            System.out.println("Ingrese el nuevo presupuesto: ");
+                            double newDinero = input.nextDouble();
+                            ejercitos.get(pos).setDinero_dis(newDinero);
+                        }
+                    }
+                        break;
 
                 case 5:
                     String salida = "";
@@ -123,7 +155,7 @@ public class Lab3_SimulacionGuerra {
 
                 case 6:
                     System.out.print("Ingrese la posición del Ejército a Eliminar: ");
-                    int pos = input.nextInt();
+                    pos = input.nextInt();
                     if (pos > ejercitos.size() - 1) {
                         System.out.println("Posición Incorrecta");
                     } else {
@@ -148,7 +180,7 @@ public class Lab3_SimulacionGuerra {
                     }
                     System.out.println(salida);
                     break;
-
+                    
                 case 9:
                     System.out.print("Ingrese la posición del Arma a Eliminar: ");
                     pos = input.nextInt();
@@ -158,7 +190,7 @@ public class Lab3_SimulacionGuerra {
                         armas.remove(pos);
                     }
                     break;
-
+                    
                 case 10:
                     salida = "";
                     for (Arma t : armas) {
