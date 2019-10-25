@@ -419,15 +419,26 @@ public class Lab3_SimulacionGuerra {
                                 for (int j = 0; j < tablero.length; j++) {
                                     if (tablero[i2][j2] instanceof Soldado) {
                                         System.out.println("En esa posicion ya hay un soldado");
+                                        break;
                                     } else {
-
+                                        tablero[i2][j2] = tablero[i1][j1];
                                     }
                                 }
                             }
-                            int j2 = input.nextInt();
+                            System.out.println("Ingrese el numero i de la posicion a donde quiere disparar: ");
+                            int i3 = input.nextInt();
+                            System.out.println("Ingrese el numero j de la posicion a donde quiere disparar: ");
+                            int i4 = input.nextInt();
+
+                            for (int i = 0; i < tablero.length; i++) {
+                                for (int j = 0; j < tablero.length; j++) {
+
+                                }
+                            }
+
                             turno = 2;
                         } else if (turno == 2) {
-                            System.out.println("Jugador 1");
+                            System.out.println("Jugador 2");
                             System.out.print("Ingrese el numero i de la posicion del soldado: ");
                             int i1 = input.nextInt();
                             System.out.print("Ingrese el numero j de la posicion del soldado: ");
@@ -436,6 +447,17 @@ public class Lab3_SimulacionGuerra {
                             int i2 = input.nextInt();
                             System.out.print("Ingrese el numero j de la posicion a donde lo va mover: ");
                             int j2 = input.nextInt();
+                            for (int i = 0; i < tablero.length; i++) {
+                                for (int j = 0; j < tablero.length; j++) {
+                                    if (tablero[i2][j2] instanceof Soldado) {
+                                        System.out.println("En esa posicion ya hay un soldado");
+                                        break;
+                                    } else {
+                                        tablero[i2][j2] = tablero[i1][j1];
+                                    }
+                                }
+                            }
+
                             turno = 1;
                         }
                     }
