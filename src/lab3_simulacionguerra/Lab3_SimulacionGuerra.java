@@ -21,7 +21,8 @@ public class Lab3_SimulacionGuerra {
             System.out.print("1 - Crear Ejército\n2 - Crear Soldado\n3 - Crear Arma\n"
                     + "4 - Modificar Ejército\n5 - Listar Ejército\n"
                     + "6 - Eliminar Ejército\n7 - Eliminar Soldado\n8 - Listar Soldados\n"
-                    + "9 - Eliminar Arma\n10 - Listar Armas\n11 - Simulación\nIngrese opción que desea: ");
+                    + "9 - Eliminar Arma\n10 - Listar Armas\n11 - Simulación\n12 - Salir\n"
+                    + "Ingrese opción que desea: ");
 
             option = input.nextInt();
 
