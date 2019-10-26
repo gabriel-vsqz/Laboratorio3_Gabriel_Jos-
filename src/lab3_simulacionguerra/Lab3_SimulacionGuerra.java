@@ -504,6 +504,8 @@ public class Lab3_SimulacionGuerra {
                 }
                 
             }
+            
+            System.out.println();
         }
         
     }

@@ -42,7 +42,7 @@ public class Rifle extends Arma {
 
     @Override
     public String toString() {
-        return super.toString() + "Rifle{" + "max=" + max + ", min=" + min + ", automatica=" + automatica + '}';
+        return super.toString() + "Rifle{" + "Max: " + max + ", Min: " + min + ", Automatica: " + automatica + '}';
     }
 
 }

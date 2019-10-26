@@ -32,7 +32,7 @@ public class Bomba extends Arma {
 
     @Override
     public String toString() {
-        return super.toString() + "Bomba{" + "material=" + material + ", alcance=" + alcance + '}';
+        return super.toString() + "Bomba{" + "Material: " + material + ", Alcance: " + alcance + '}';
     }
 
 }

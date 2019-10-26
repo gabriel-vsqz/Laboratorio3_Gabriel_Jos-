@@ -27,7 +27,7 @@ public class General extends Soldado {
 
     @Override
     public String toString() {
-        return super.toString() + "General{" + "a\u00f1os_mandato=" + años_mandato + '}';
+        return super.toString() + "General{" + "Mandato: " + años_mandato + '}';
     }
 
 }

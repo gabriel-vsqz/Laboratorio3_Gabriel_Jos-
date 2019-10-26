@@ -68,7 +68,7 @@ public class Soldado {
 
     @Override
     public String toString() {
-        return "Soldado{" + "nombre=" + nombre + ", lugar=" + lugar + ", edad=" + edad + ", sexo=" + sexo + '}';
+        return "Soldado{" + "Nombre: " + nombre + ", Lugar: " + lugar + ", Edad: " + edad + ", Sexo: " + sexo + '}';
     }
     
 }
